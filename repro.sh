@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Shows turbo dropping an untracked file from package hashing because a
-# sibling file merely *ends* in ".gitignore".
+# Shows turbo skipping an untracked file when hashing a package, because
+# another file in the same folder has a name ending in ".gitignore".
 #
 #   ./repro.sh              uses npx turbo@latest (reproduces the bug)
 #   ./repro.sh /path/turbo  uses a given binary (a build of #13916 should pass)
