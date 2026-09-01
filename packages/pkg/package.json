@@ -1,0 +1,7 @@
+{
+  "name": "pkg",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "mkdir -p dist && cat config.log > dist/out.txt"
+  }
+}
