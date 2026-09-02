@@ -1,5 +1,7 @@
 # turbo hashes wrong when a file ends in .gitignore
 
+Fixed in https://github.com/vercel/turborepo/pull/13916, merged 2 Sep 2026.
+
 Reproduction for https://github.com/vercel/turborepo/pull/13916.
 
 Turbo treats any untracked file whose name ends in `.gitignore` as a real gitignore. Git does not. So a copied template like `packages/pkg/Node.gitignore` makes turbo skip the files it matches when hashing a package. Editing one of those files then does not change the task hash, and turbo restores old output from the cache.
